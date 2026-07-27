@@ -1,0 +1,7 @@
+{
+  "files": ["site-v3/index.html"],
+  "exclude": [],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

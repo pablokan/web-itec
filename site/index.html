@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iTec Río Cuarto — 40 años liderando la educación tecnológica</title>
+  <meta name="description" content="Instituto Tecnológico Río Cuarto: Tecnicaturas en Desarrollo de Software, Inteligencia Artificial, Turismo y Hotelería y Mecatrónica. Secundario Tecnológico Ada Byron y cursos PCC. Ingreso Agosto 2026.">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin-wght-normal.woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="min-h-dvh flex flex-col">
+
+  <!-- Barra de anuncio global -->
+<div class="border-b border-white/5 bg-ink-900">
+  <div class="container-x flex items-center justify-center gap-3 py-2 text-center">
+    <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-500">
+      Ingreso <span class="text-brand-400">Agosto 2026</span> · Software + IA · Inscripciones abiertas
+    </span>
+    <span class="hidden sm:inline text-paper-600" aria-hidden="true">·</span>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform"
+       target="_blank" rel="noopener"
+       class="hidden sm:inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.18em] text-brand-400 hover:text-brand-300 transition-colors">
+      Quiero + Info <svg class="w-3.5 h-3.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+    </a>
+  </div>
+</div>
+
+  <!-- Header global -->
+<header class="sticky top-0 z-50 border-b border-white/5 bg-ink-950/85 backdrop-blur-md">
+  <div class="container-x flex h-16 items-center justify-between gap-6">
+    <a href="./index.html" class="flex items-center gap-2.5 shrink-0" aria-label="iTec Río Cuarto — Inicio">
+      <img src="./assets/img/logo-itec.png" alt="Logo iTec Río Cuarto" class="h-9 w-9 rounded-full" width="36" height="36">
+      <span class="text-[15px] font-semibold tracking-tight text-paper-50">iTec <span class="text-paper-500 font-normal">Río Cuarto</span></span>
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Navegación principal">
+      <div class="relative group" data-nav-group>
+        <button type="button" data-nav-parent class="nav-link inline-flex items-center gap-1 py-2" aria-haspopup="true">
+          Estudiantes <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-150 absolute left-0 top-full pt-2">
+          <div class="card min-w-56 p-2 shadow-2xl shadow-black/40">
+            <a data-nav-link href="./estudiantes/ingresantes.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Ingresantes</a>
+            <a data-nav-link href="./estudiantes/horarios-de-cursado.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Horarios de Cursado</a>
+            <a data-nav-link href="./estudiantes/calendario-academico.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Calendario Académico</a>
+            <a href="https://sitec.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">SiTec <svg class="w-3.5 h-3.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group" data-nav-group>
+        <button type="button" data-nav-parent class="nav-link inline-flex items-center gap-1 py-2" aria-haspopup="true">
+          Carreras <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-150 absolute left-0 top-full pt-2">
+          <div class="card min-w-64 p-2 shadow-2xl shadow-black/40">
+            <a data-nav-link href="./carreras/software.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Desarrollo de Software</a>
+            <a data-nav-link href="./carreras/inteligencia-artificial.html" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Inteligencia Artificial <span class="chip chip-accent !px-2 !py-0.5 !text-[10px]">Nueva 2026</span></a>
+            <a data-nav-link href="./carreras/turismo.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Turismo y Hotelería</a>
+            <a data-nav-link href="./carreras/mecatronica.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Mecatrónica</a>
+          </div>
+        </div>
+      </div>
+
+      <a data-nav-link href="./trayectos/operario-electromecanico.html" class="nav-link">Trayectos</a>
+
+      <div class="relative group" data-nav-group>
+        <button type="button" data-nav-parent class="nav-link inline-flex items-center gap-1 py-2" aria-haspopup="true">
+          Ada Byron <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-150 absolute left-0 top-full pt-2">
+          <div class="card min-w-56 p-2 shadow-2xl shadow-black/40">
+            <a data-nav-link href="./ada-byron/index.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Secundario Ada Byron</a>
+            <a data-nav-link href="./ada-byron/propuesta.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Propuesta</a>
+            <a data-nav-link href="./ada-byron/admision.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Admisión</a>
+            <a data-nav-link href="./ada-byron/quien-fue-ada-byron.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Quién fue Ada Byron?</a>
+            <a data-nav-link href="./ada-byron/galeria.html" class="block rounded-lg px-3 py-2 text-sm text-paper-500 hover:bg-white/5 hover:text-paper-50">Galería de Fotos</a>
+          </div>
+        </div>
+      </div>
+
+      <a data-nav-link href="./portal-de-trabajo/index.html" class="nav-link">Portal de Trabajo</a>
+      <a data-nav-link href="./itec-labs/index.html" class="nav-link">iTec Labs</a>
+      <a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="nav-link inline-flex items-center gap-1">PCC Cursos <svg class="w-3.5 h-3.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform"
+         target="_blank" rel="noopener" class="btn btn-primary hidden sm:inline-flex !px-4 !py-2">
+        Quiero + Info
+      </a>
+      <button type="button" data-menu-btn class="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white/10 text-paper-300" aria-label="Abrir menú" aria-expanded="false">
+        <span data-icon-open><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg></span>
+        <span data-icon-close class="hidden"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <div data-mobile-menu class="hidden lg:hidden border-t border-white/5 bg-ink-950">
+    <nav class="container-x py-4 flex flex-col gap-1" aria-label="Navegación móvil">
+      <div>
+        <button type="button" data-submenu-btn class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">
+          Estudiantes <svg class="w-4 h-4 transition-transform" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="hidden pl-4 pb-1 flex flex-col">
+          <a href="./estudiantes/index.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Estudiar en el iTec</a>
+          <a href="./estudiantes/ingresantes.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Ingresantes</a>
+          <a href="./estudiantes/horarios-de-cursado.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Horarios de Cursado</a>
+          <a href="./estudiantes/calendario-academico.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Calendario Académico</a>
+          <a href="https://sitec.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">SiTec ↗</a>
+        </div>
+      </div>
+      <div>
+        <button type="button" data-submenu-btn class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">
+          Carreras <svg class="w-4 h-4 transition-transform" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="hidden pl-4 pb-1 flex flex-col">
+          <a href="./carreras/index.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Todas las carreras</a>
+          <a href="./carreras/software.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Desarrollo de Software</a>
+          <a href="./carreras/inteligencia-artificial.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Inteligencia Artificial</a>
+          <a href="./carreras/turismo.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Turismo y Hotelería</a>
+          <a href="./carreras/mecatronica.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Mecatrónica</a>
+        </div>
+      </div>
+      <a href="./trayectos/operario-electromecanico.html" class="rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">Trayectos</a>
+      <div>
+        <button type="button" data-submenu-btn class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">
+          Ada Byron <svg class="w-4 h-4 transition-transform" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </button>
+        <div class="hidden pl-4 pb-1 flex flex-col">
+          <a href="./ada-byron/index.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Secundario Ada Byron</a>
+          <a href="./ada-byron/propuesta.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Propuesta</a>
+          <a href="./ada-byron/admision.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Admisión</a>
+          <a href="./ada-byron/quien-fue-ada-byron.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Quién fue Ada Byron?</a>
+          <a href="./ada-byron/galeria.html" class="rounded-lg px-3 py-2 text-sm text-paper-500 hover:text-paper-50">Galería de Fotos</a>
+        </div>
+      </div>
+      <a href="./portal-de-trabajo/index.html" class="rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">Portal de Trabajo</a>
+      <a href="./itec-labs/index.html" class="rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">iTec Labs</a>
+      <a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="rounded-lg px-3 py-2.5 text-[15px] text-paper-300 hover:bg-white/5">PCC Cursos ↗</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform" target="_blank" rel="noopener" class="btn btn-primary mt-3">Quiero + Info</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="flex-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="container-x pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <span class="chip"><svg class="w-3.5 h-3.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg> Río Cuarto · Córdoba</span>
+          <h1 class="mt-10 max-w-xl">
+            <img src="./assets/img/logo-40-anios-dark.png" alt="40 años — Liderando la educación tecnológica" class="h-auto w-full" width="1618" height="694" fetchpriority="high">
+          </h1>
+          <div class="mt-12 flex flex-wrap items-center gap-3">
+            <a href="./carreras/index.html" class="btn btn-primary">Explorar carreras <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform" target="_blank" rel="noopener" class="btn btn-ghost">Quiero + Info <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <div class="overflow-hidden rounded-2xl border border-white/10">
+              <img src="./assets/img/foto-edificio-itec.jpg" alt="Fachada del Instituto Tecnológico Río Cuarto con lapacho amarillo en flor" class="aspect-[1219/813] w-full object-cover" width="1219" height="813">
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform" target="_blank" rel="noopener"
+               class="card card-hover absolute -bottom-5 left-5 right-5 sm:right-auto flex items-center gap-4 p-4 pr-6 shadow-2xl shadow-black/50">
+              <span class="chip chip-accent">Ingreso Agosto 2026</span>
+              <span class="text-sm text-paper-300">Inscripciones abiertas</span>
+              <svg class="w-4 h-4 text-brand-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="border-y border-white/5 bg-ink-900/40">
+      <div class="container-x grid grid-cols-2 gap-6 py-8 lg:grid-cols-4">
+        <div class="reveal">
+          <p class="font-mono text-2xl sm:text-3xl text-paper-50">4</p>
+          <p class="mt-1 text-sm text-paper-500">tecnicaturas superiores</p>
+        </div>
+        <div class="reveal">
+          <p class="font-mono text-2xl sm:text-3xl text-paper-50">2</p>
+          <p class="mt-1 text-sm text-paper-500">sedes en Río Cuarto</p>
+        </div>
+        <div class="reveal">
+          <p class="font-mono text-2xl sm:text-3xl text-paper-50">2</p>
+          <p class="mt-1 text-sm text-paper-500">modalidades de cursado</p>
+        </div>
+        <div class="reveal">
+          <p class="font-mono text-2xl sm:text-3xl text-paper-50">PCC</p>
+          <p class="mt-1 text-sm text-paper-500">capacitación continua</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARRERAS ============ -->
+    <section class="container-x py-20 lg:py-28">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="kicker">Tecnicaturas de Nivel Superior</p>
+          <h2 class="h-section mt-3">Nuestras carreras</h2>
+        </div>
+        <a href="./carreras/index.html" class="btn btn-ghost">Ver todas <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2">
+        <!-- IA -->
+        <a href="./carreras/inteligencia-artificial.html" class="card card-hover group overflow-hidden reveal">
+          <div class="aspect-[1080/743] overflow-hidden">
+            <img src="./assets/img/card-carrera-ia.png" alt="Tecnicatura en Ciencia de Datos e Inteligencia Artificial" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" width="1080" height="743" loading="lazy">
+          </div>
+          <div class="p-5 sm:p-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip chip-accent">Nueva carrera 2026</span>
+              <span class="chip">Preinscripciones abiertas</span>
+            </div>
+            <h3 class="mt-3 text-xl sm:text-2xl">Ciencia de Datos e Inteligencia Artificial</h3>
+            <p class="mt-1.5 flex items-center gap-1.5 text-sm text-paper-500 group-hover:text-paper-300 transition-colors">Ver la carrera <svg class="w-4 h-4 text-brand-400 transition-transform group-hover:translate-x-1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></p>
+          </div>
+        </a>
+
+        <!-- Software -->
+        <a href="./carreras/software.html" class="card card-hover group overflow-hidden reveal">
+          <div class="aspect-[1280/873] overflow-hidden">
+            <img src="./assets/img/card-carrera-software.jpg" alt="Técnico Superior en Desarrollo de Software" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" width="1280" height="873" loading="lazy">
+          </div>
+          <div class="p-5 sm:p-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">3 años</span>
+              <span class="chip">Presencial + Virtual</span>
+            </div>
+            <h3 class="mt-3 text-xl sm:text-2xl">Desarrollo de Software</h3>
+            <p class="mt-1.5 flex items-center gap-1.5 text-sm text-paper-500 group-hover:text-paper-300 transition-colors">Ver la carrera <svg class="w-4 h-4 text-brand-400 transition-transform group-hover:translate-x-1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></p>
+          </div>
+        </a>
+
+        <!-- Turismo -->
+        <a href="./carreras/turismo.html" class="card card-hover group overflow-hidden reveal">
+          <div class="aspect-[1280/873] overflow-hidden">
+            <img src="./assets/img/card-carrera-turismo.png" alt="Técnico Superior en Turismo y Hotelería" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" width="1280" height="873" loading="lazy">
+          </div>
+          <div class="p-5 sm:p-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">3 años</span>
+              <span class="chip">Presencial</span>
+            </div>
+            <h3 class="mt-3 text-xl sm:text-2xl">Turismo y Hotelería</h3>
+            <p class="mt-1.5 flex items-center gap-1.5 text-sm text-paper-500 group-hover:text-paper-300 transition-colors">Ver la carrera <svg class="w-4 h-4 text-brand-400 transition-transform group-hover:translate-x-1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></p>
+          </div>
+        </a>
+
+        <!-- Mecatrónica -->
+        <a href="./carreras/mecatronica.html" class="card card-hover group overflow-hidden reveal">
+          <div class="aspect-[1280/873] overflow-hidden">
+            <img src="./assets/img/card-carrera-mecatronica.png" alt="Técnico Superior en Mecatrónica" class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" width="1280" height="873" loading="lazy">
+          </div>
+          <div class="p-5 sm:p-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="chip">3 años</span>
+              <span class="chip">Presencial</span>
+            </div>
+            <h3 class="mt-3 text-xl sm:text-2xl">Mecatrónica</h3>
+            <p class="mt-1.5 flex items-center gap-1.5 text-sm text-paper-500 group-hover:text-paper-300 transition-colors">Ver la carrera <svg class="w-4 h-4 text-brand-400 transition-transform group-hover:translate-x-1" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></p>
+          </div>
+        </a>
+      </div>
+
+      <!-- IA — spotlight con video -->
+      <div class="card mt-4 overflow-hidden reveal">
+        <div class="grid lg:grid-cols-2">
+          <div class="video-frame !rounded-none !border-0">
+            <video class="h-full w-full object-cover" src="./assets/video/video-ai-redes-2.mp4" controls preload="metadata" aria-label="Presentación de la carrera Ciencia de Datos e Inteligencia Artificial"></video>
+          </div>
+          <div class="flex flex-col justify-center p-8 sm:p-10">
+            <span class="chip chip-accent w-fit">Nueva carrera 2026</span>
+            <h3 class="mt-4 text-2xl sm:text-3xl">Ciencia de Datos e Inteligencia Artificial</h3>
+            <p class="mt-3 text-paper-500 leading-relaxed">Preinscripciones abiertas — ingreso Agosto 2026.</p>
+            <div class="mt-6">
+              <a href="./carreras/inteligencia-artificial.html" class="btn btn-primary">Ver la carrera <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CAMPUS VIRTUAL ============ -->
+    <section class="container-x pb-20 lg:pb-28">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-6 reveal">
+          <div class="video-frame">
+            <video class="h-full w-full object-cover" src="./assets/video/video-campus-virtual.mp4" controls preload="metadata" aria-label="Recorrida por el Campus Virtual iTec"></video>
+          </div>
+        </div>
+        <div class="lg:col-span-6 reveal">
+          <h2 class="h-section">Estudiá Desarrollo de Software <span class="text-paper-500">de manera virtual</span></h2>
+          <p class="mt-5 text-paper-500 leading-relaxed max-w-[52ch]">
+            El Campus Virtual iTec combina clases en vivo con docentes y contenido disponible las 24 horas: trabajos prácticos, ejercicios y material de consulta, a tu ritmo y desde donde estés.
+          </p>
+          <div class="mt-8">
+            <a href="./carreras/software.html" class="btn btn-primary">Conocer la carrera <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADA BYRON ============ -->
+    <section class="container-x pb-20 lg:pb-28">
+      <div class="grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5 reveal">
+          <div class="card flex items-center justify-center p-10 sm:p-14 bg-[radial-gradient(ellipse_at_center,oklch(0.22_0.02_25)_0%,var(--color-ink-900)_70%)]">
+            <img src="./assets/img/logo-ada-byron.png" alt="Logo Secundario Tecnológico Ada Byron" class="h-auto w-full max-w-56" width="1280" height="1793" loading="lazy">
+          </div>
+        </div>
+        <div class="lg:col-span-7 reveal">
+          <p class="kicker">Nivel Medio</p>
+          <h2 class="h-section mt-3">Secundario Tecnológico Ada Byron</h2>
+          <p class="mt-5 text-paper-500 leading-relaxed max-w-[60ch]">
+            Una propuesta educativa integral con orientación en <strong class="text-paper-300 font-medium">Programación y Robótica</strong>, que atiende los aspectos pedagógico-didácticos y también las dimensiones culturales y psicosociales del aprendizaje.
+          </p>
+          <p class="mt-4 text-paper-500 leading-relaxed max-w-[60ch]">
+            Desde el ciclo lectivo 2026 incorpora <strong class="text-paper-300 font-medium">3º año</strong>: vacantes abiertas para 1º, 2º y 3º año.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="./ada-byron/index.html" class="btn btn-ghost">Conocer la propuesta <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+            <a href="https://forms.gle/x2TwoqM415tbsTdt8" target="_blank" rel="noopener" class="btn btn-primary">Formulario de admisión <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PCC ============ -->
+    <section class="border-y border-white/5 bg-ink-900/40">
+      <div class="container-x py-20 lg:py-28">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <h2 class="h-section">Programa de Capacitación Continua</h2>
+          <p class="mt-5 text-paper-500 leading-relaxed">
+            Cursos y capacitaciones del iTec para seguir creciendo profesionalmente, durante todo el año.
+          </p>
+        </div>
+        <div class="video-frame mx-auto mt-10 max-w-4xl reveal">
+          <iframe class="h-full w-full" src="https://www.youtube.com/embed/pO55hU8AXj4" title="PCC iTec — Conocé nuestra oferta de capacitaciones" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mt-8 text-center reveal">
+          <a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="btn btn-primary">Ver cursos en PCC <svg class="w-4 h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="border-t border-white/5">
+      <div class="container-x grid items-center gap-12 py-20 lg:grid-cols-12 lg:py-28">
+        <div class="lg:col-span-7 reveal">
+          <h2 class="h-section">Quiénes somos</h2>
+          <div class="mt-8 flex flex-col gap-5 leading-relaxed text-paper-300">
+            <p>Somos una Institución de Educación Técnica Superior con más de treinta años de trayectoria.</p>
+            <p>El Instituto Tecnológico Río Cuarto procura que los estudiantes adquieran competencias laborales y sociales basadas en los principios de una educación integral y de calidad.</p>
+            <p>Nuestro principal objetivo es lograr que los futuros profesionales se inserten en el mercado laboral como individuos autónomos, innovadores y creativos; capaces de usar las últimas tecnologías, adaptándose a los cambios constantes.</p>
+          </div>
+          <p class="mt-10 text-2xl sm:text-3xl font-semibold tracking-tight text-paper-50">
+            iTec Río Cuarto es <span class="text-brand-400">EDUCACIÓN PARA TRANSFORMAR</span>!
+          </p>
+        </div>
+        <div class="lg:col-span-5 reveal">
+          <div class="video-frame">
+            <video class="h-full w-full object-cover" src="./assets/video/video-spot.mp4" controls preload="metadata" aria-label="Spot institucional iTec"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="border-t border-white/5 bg-ink-900/40">
+      <div class="container-x py-20 lg:py-28">
+        <h2 class="h-section reveal">Info de contacto</h2>
+        <div class="mt-10 grid gap-4 lg:grid-cols-3">
+          <div class="card p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-brand-400"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/></svg></span>
+              <h3 class="text-xl">Sede Centro</h3>
+            </div>
+            <p class="mt-4 text-paper-300">Constitución 716<br>Barrio Centro, Río Cuarto</p>
+            <div class="mt-4 border-t border-white/5 pt-4">
+              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Horarios de atención</p>
+              <p class="mt-2 text-sm text-paper-500">Mañana de 8:00 a 12:30 hs<br>Tarde de 17:00 a 21:00 hs</p>
+            </div>
+          </div>
+          <div class="card p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-brand-400"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"/></svg></span>
+              <h3 class="text-xl">Sede Campus</h3>
+            </div>
+            <p class="mt-4 text-paper-300">Wenceslao Tejerina Norte 783<br>Barrio Villa Dalcar, Río Cuarto</p>
+            <div class="mt-4 border-t border-white/5 pt-4">
+              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Horarios de atención</p>
+              <p class="mt-2 text-sm text-paper-500">Lunes a Jueves, de 19:00 a 22:00 hs</p>
+            </div>
+          </div>
+          <div class="card p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-brand-400"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg></span>
+              <h3 class="text-xl">Contactos</h3>
+            </div>
+            <ul class="mt-4 flex flex-col gap-2.5 text-sm text-paper-500">
+              <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg><a href="tel:+543584643036" class="hover:text-paper-50 transition-colors">0358-4643036</a></li>
+              <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><a href="mailto:informes@itecriocuarto.org.ar" class="hover:text-paper-50 transition-colors">informes@itecriocuarto.org.ar</a></li>
+            </ul>
+            <div class="mt-5 flex flex-col gap-2">
+              <a href="https://wa.me/5493585606036" target="_blank" rel="noopener" class="btn btn-ghost !justify-start"><svg class="w-4 h-4 text-brand-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp Carreras</a>
+              <a href="https://wa.me/5493585606052" target="_blank" rel="noopener" class="btn btn-ghost !justify-start"><svg class="w-4 h-4 text-brand-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> WhatsApp Cursos</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
+          <p class="text-sm text-paper-500">Encontranos en las redes sociales</p>
+          <div class="flex items-center gap-2">
+            <a href="https://www.facebook.com/iTecRioCuarto" target="_blank" rel="noopener" aria-label="Facebook iTec Río Cuarto" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+            <a href="https://www.instagram.com/itecriocuarto/" target="_blank" rel="noopener" aria-label="Instagram iTec Río Cuarto" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+            <a href="https://www.tiktok.com/@itecriocuarto" target="_blank" rel="noopener" aria-label="TikTok iTec Río Cuarto" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-5 h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer global -->
+<footer class="border-t border-white/5 bg-ink-900/50">
+  <div class="container-x py-14">
+    <div class="grid gap-12 lg:grid-cols-12">
+      <!-- Marca -->
+      <div class="lg:col-span-4">
+        <a href="./index.html" class="flex items-center gap-2.5">
+          <img src="./assets/img/logo-itec.png" alt="Logo iTec Río Cuarto" class="h-10 w-10 rounded-full" width="40" height="40">
+          <span class="text-lg font-semibold tracking-tight text-paper-50">iTec <span class="text-paper-500 font-normal">Río Cuarto</span></span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-paper-500 max-w-[32ch]">
+          Educación para transformar. Instituto de Educación Técnica Superior con más de treinta años de trayectoria.
+        </p>
+        <img src="./assets/img/footer-brand-strip.png" alt="iTec · Secundario Tecnológico Ada Byron · iTec Labs · PCC" class="mt-6 h-6 w-auto opacity-70" width="1280" height="98" loading="lazy">
+      </div>
+
+      <!-- Secciones -->
+      <nav class="lg:col-span-2" aria-label="Footer — Estudiar">
+        <h2 class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Estudiar</h2>
+        <ul class="mt-4 flex flex-col gap-2.5 text-sm">
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./carreras/index.html">Carreras</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./ada-byron/index.html">Secundario Ada Byron</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./trayectos/operario-electromecanico.html">Trayectos</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener">PCC Cursos ↗</a></li>
+        </ul>
+      </nav>
+
+      <nav class="lg:col-span-2" aria-label="Footer — Institución">
+        <h2 class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Institución</h2>
+        <ul class="mt-4 flex flex-col gap-2.5 text-sm">
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./estudiantes/index.html">Estudiantes</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./estudiantes/calendario-academico.html">Calendario Académico</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./portal-de-trabajo/index.html">Portal de Trabajo</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="./itec-labs/index.html">iTec Labs</a></li>
+          <li><a class="text-paper-500 hover:text-paper-50 transition-colors" href="https://sitec.itecriocuarto.org.ar/" target="_blank" rel="noopener">SiTec ↗</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contacto -->
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Contacto</h2>
+        <ul class="mt-4 flex flex-col gap-3 text-sm text-paper-500">
+          <li class="flex items-start gap-2.5"><svg class="w-4 h-4 mt-0.5 shrink-0 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg><span><strong class="text-paper-300 font-medium">Sede Centro</strong> · Constitución 716, Río Cuarto<br>Mañana 8:00–12:30 · Tarde 17:00–21:00</span></li>
+          <li class="flex items-start gap-2.5"><svg class="w-4 h-4 mt-0.5 shrink-0 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg><span><strong class="text-paper-300 font-medium">Sede Campus</strong> · Wenceslao Tejerina Norte 783, Villa Dalcar<br>Lun a Jue 19:00–22:00</span></li>
+          <li class="flex items-center gap-2.5"><svg class="w-4 h-4 shrink-0 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg><a href="tel:+543584643036" class="hover:text-paper-50 transition-colors">0358-4643036</a></li>
+          <li class="flex items-center gap-2.5"><svg class="w-4 h-4 shrink-0 text-paper-600" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/></svg><a href="mailto:informes@itecriocuarto.org.ar" class="hover:text-paper-50 transition-colors">informes@itecriocuarto.org.ar</a></li>
+        </ul>
+        <div class="mt-5 flex items-center gap-2">
+          <a href="https://wa.me/5493585606036" target="_blank" rel="noopener" aria-label="WhatsApp informes de carreras" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-4.5 h-4.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></a>
+          <a href="https://www.facebook.com/iTecRioCuarto" target="_blank" rel="noopener" aria-label="Facebook iTec Río Cuarto" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-4.5 h-4.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg></a>
+          <a href="https://www.instagram.com/itecriocuarto/" target="_blank" rel="noopener" aria-label="Instagram iTec Río Cuarto" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-4.5 h-4.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+          <a href="https://www.tiktok.com/@itecriocuarto" target="_blank" rel="noopener" aria-label="TikTok iTec Río Cuarto" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-paper-500 hover:text-paper-50 hover:border-white/25 transition-colors"><svg class="w-4.5 h-4.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,0,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,0,1-120,0c0-25.9,16.64-49.13,40-57.6v27.67A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/5 pt-6">
+      <p class="text-xs text-paper-600">© 2026 iTec Río Cuarto — Instituto Tecnológico Río Cuarto</p>
+      <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-600">Educación para transformar</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="./assets/js/main.js" defer></script>
+</body>
+</html>

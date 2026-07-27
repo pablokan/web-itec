@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iTec Río Cuarto — Educación para transformar</title>
+  <meta name="description" content="Instituto Tecnológico Río Cuarto: Tecnicaturas en Desarrollo de Software, Inteligencia Artificial, Turismo y Hotelería y Mecatrónica. Secundario Tecnológico Ada Byron y cursos PCC.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .hero {
+      position: relative;
+    }
+    .hero-box--colorized {
+      border-left: 6px solid var(--color-accent);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      background: transparent;
+    }
+    @media (min-width: 768px) {
+      .hero-box--colorized {
+        position: absolute;
+        right: 70px;
+        bottom: 200px;
+        margin: 0;
+        max-width: 520px;
+      }
+    }
+    .hero-box--colorized .kicker {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    .hero-box--colorized .btn-primary {
+      background: var(--color-accent);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 2px 8px color-mix(in oklab, transparent, var(--color-accent) 10%);
+    }
+    .hero-box--colorized .chip-accent {
+      background: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+    .hero-box--colorized .btn-outline {
+      border-color: color-mix(in oklab, var(--color-accent), var(--color-border) 25%);
+      color: var(--color-ink);
+    }
+    .hero-box--colorized .btn-primary:hover {
+      background: var(--color-accent-hover);
+    }
+    .wordcloud {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem 1rem;
+      padding: 1rem;
+    }
+    .wordcloud-word {
+      display: inline-block;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>Ingreso Agosto 2026 · Tecnicaturas de Nivel Superior</span>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform" target="_blank" rel="noopener">Quiero + Info ↗</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container-x header-inner">
+      <a href="index.html" class="brand" aria-label="iTec Río Cuarto">
+        <img src="assets/img/logo-itec.png" alt="Logo iTec Río Cuarto">
+        <span>iTec <em>Río Cuarto</em></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="carreras.html" class="nav-item">Carreras</a>
+        <a href="ada-byron.html" class="nav-item">Secundario Ada Byron</a>
+        <a href="estudiantes.html" class="nav-item">Estudiantes</a>
+        <a href="trayectos.html" class="nav-item">Trayectos</a>
+        <a href="portal-de-trabajo.html" class="nav-link">Portal de Trabajo</a>
+        <a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="nav-item">PCC Cursos ↗</a>
+      </nav>
+      <div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjhSUcMVsUobJ4uUEUr3kAA7-VBLYUTbhhV01EtWf8Lcz3xw/viewform" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.5rem 1rem;">Quiero + Info</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Right-Aligned Box -->
+    <section class="hero">
+      <img src="assets/img/banner-edificio-40anios.png" alt="iTec Río Cuarto 40 años" class="hero-bg">
+      <div class="container-x">
+        <div class="hero-content-wrap">
+          <div class="hero-box hero-box--colorized wordcloud">
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Programación</div>
+            <div class="wordcloud-word" style="font-size:40px;color:var(--color-accent);font-weight:800">iTec</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Robótica</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Ciberseguridad</div>
+            <div class="wordcloud-word" style="font-size:35px;color:#7EC8E3;font-weight:700">IA</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Big Data</div>
+            <div class="wordcloud-word" style="font-size:30px;color:#4A90D9;font-weight:600">Software</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Cloud</div>
+            <div class="wordcloud-word" style="font-size:30px;color:#6BBF59;font-weight:600">Mecatrónica</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Blockchain</div>
+            <div class="wordcloud-word" style="font-size:30px;color:#E8B84B;font-weight:600">Turismo</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Machine&nbsp;Learning</div>
+            <div class="wordcloud-word" style="font-size:30px;color:#E8924B;font-weight:600">Marketing</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Deep&nbsp;Learning</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Redes</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">IoT</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Python</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">JavaScript</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Datos</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Algoritmos</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Desarrollo&nbsp;Web</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Móvil</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Backend</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Frontend</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">API</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">SQL</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Docker</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Linux</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Git</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">HTML</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">CSS</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Node</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">React</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Arduino</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#999">Innovación</div>
+            <div class="wordcloud-word" style="font-size:20px;color:#888">Futuro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container-x stats-grid">
+        <div class="stat-item">
+          <div class="num">4</div>
+          <div class="label">Tecnicaturas superiores</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">2</div>
+          <div class="label">Sedes en Río Cuarto</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">30+</div>
+          <div class="label">Años de trayectoria</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">PCC</div>
+          <div class="label">Capacitación continua</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carreras Section -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-header">
+          <div>
+            <span class="kicker">Nivel Superior</span>
+            <h2 class="section-title">Nuestras carreras</h2>
+          </div>
+          <a href="carreras.html" class="btn btn-outline">Ver todas las carreras →</a>
+        </div>
+
+        <div class="careers-grid">
+          <!-- AI -->
+          <a href="carreras/inteligencia-artificial.html" class="career-card">
+            <img src="assets/img/card-carrera-ia.png" alt="Ciencia de Datos e Inteligencia Artificial">
+            <div class="career-card-body">
+              <div class="chips">
+                <span class="chip chip-accent">Nueva 2026</span>
+                <span class="chip">Preinscripciones Abiertas</span>
+              </div>
+              <h3>Ciencia de Datos e Inteligencia Artificial</h3>
+              <p>Formación especializada en machine learning, análisis de datos y modelado predictivo para el mercado tecnológico actual.</p>
+              <div style="margin-top: 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--color-accent);">Conocer plan de estudios →</div>
+            </div>
+          </a>
+
+          <!-- Software -->
+          <a href="carreras/software.html" class="career-card">
+            <img src="assets/img/card-carrera-software.jpg" alt="Desarrollo de Software">
+            <div class="career-card-body">
+              <div class="chips">
+                <span class="chip">3 años</span>
+                <span class="chip">Presencial + Virtual</span>
+              </div>
+              <h3>Desarrollo de Software</h3>
+              <p>Diseño, construcción y testing de aplicaciones web, móviles y sistemas robustos con alta demanda laboral.</p>
+              <div style="margin-top: 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--color-accent);">Conocer plan de estudios →</div>
+            </div>
+          </a>
+
+          <!-- Turismo -->
+          <a href="carreras/turismo.html" class="career-card">
+            <img src="assets/img/card-carrera-turismo.png" alt="Turismo y Hotelería">
+            <div class="career-card-body">
+              <div class="chips">
+                <span class="chip">3 años</span>
+                <span class="chip">Presencial</span>
+              </div>
+              <h3>Turismo y Hotelería</h3>
+              <p>Gestión de empresas turísticas, organización de eventos, hospitalidad y desarrollo regional sustentable.</p>
+              <div style="margin-top: 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--color-accent);">Conocer plan de estudios →</div>
+            </div>
+          </a>
+
+          <!-- Mecatrónica -->
+          <a href="carreras/mecatronica.html" class="career-card">
+            <img src="assets/img/card-carrera-mecatronica.png" alt="Mecatrónica">
+            <div class="career-card-body">
+              <div class="chips">
+                <span class="chip">3 años</span>
+                <span class="chip">Presencial</span>
+              </div>
+              <h3>Mecatrónica</h3>
+              <p>Sinergia entre mecánica, electrónica y sistemas de control inteligente para la automatización industrial.</p>
+              <div style="margin-top: 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--color-accent);">Conocer plan de estudios →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Video Spotlight -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container-x">
+        <div class="spotlight-grid">
+          <div class="video-frame">
+            <video src="assets/video/video-ai-redes-2.mp4" controls preload="metadata"></video>
+          </div>
+          <div>
+            <span class="kicker">Innovación 2026</span>
+            <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1rem;">Ciencia de Datos e Inteligencia Artificial</h2>
+            <p>Incorporamos una carrera clave para el desarrollo profesional. Aprendé a extraer valor de los datos, entrenar modelos de IA y liderar proyectos tecnológicos con impacto real.</p>
+            <div style="margin-top: 2rem;">
+              <a href="carreras/inteligencia-artificial.html" class="btn btn-primary">Ver detalles de la carrera</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Virtual -->
+    <section class="section">
+      <div class="container-x">
+        <div class="spotlight-grid">
+          <div>
+            <span class="kicker">Flexibilidad y Calidad</span>
+            <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1rem;">Estudiá Desarrollo de Software de manera virtual</h2>
+            <p>El Campus Virtual iTec combina clases en vivo con docentes expertos y contenido disponible 24/7: prácticas, laboratorios y soporte continuo a tu propio ritmo.</p>
+            <div style="margin-top: 2rem;">
+              <a href="carreras/software.html" class="btn btn-primary">Conocer el Campus Virtual</a>
+            </div>
+          </div>
+          <div class="video-frame">
+            <video src="assets/video/video-campus-virtual.mp4" controls preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ada Byron Section -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container-x">
+        <div class="spotlight-grid">
+          <div style="display: flex; align-items: center; justify-content: center; background: #1A1A1A; border-radius: var(--radius-lg); padding: 3rem;">
+            <img src="assets/img/logo-ada-byron.png" alt="Secundario Ada Byron" style="max-height: 200px; width: auto;">
+          </div>
+          <div>
+            <span class="kicker">Nivel Medio Tecnológico</span>
+            <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1rem;">Secundario Ada Byron</h2>
+            <p>Propuesta educativa integral con orientación en <strong>Programación y Robótica</strong>, enfocada en el desarrollo académico, cultural y socio-emocional de los jóvenes.</p>
+            <p style="margin-top: 1rem;">¡Vacantes abiertas para 1º, 2º y nuevo 3º año!</p>
+            <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+              <a href="ada-byron.html" class="btn btn-primary">Conocer propuesta</a>
+              <a href="https://forms.gle/x2TwoqM415tbsTdt8" target="_blank" rel="noopener" class="btn btn-outline">Formulario de admisión</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PCC Section -->
+    <section class="section">
+      <div class="container-x text-center" style="max-width: 800px; margin: 0 auto;">
+        <span class="kicker">Formación Continua</span>
+        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1rem;">Programa de Capacitación Continua (PCC)</h2>
+        <p>Cursos cortos, talleres y especializaciones técnicas dictados durante todo el año para potenciar tus habilidades y inserción laboral.</p>
+      </div>
+      <div class="container-x" style="margin-top: 3rem;">
+        <div class="video-frame" style="max-width: 900px; margin: 0 auto;">
+          <iframe src="https://www.youtube.com/embed/pO55hU8AXj4" title="PCC iTec" allowfullscreen></iframe>
+        </div>
+        <div style="margin-top: 2rem; text-align: center;">
+          <a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener" class="btn btn-primary">Ver oferta de cursos PCC ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container-x">
+        <div class="spotlight-grid">
+          <div>
+            <span class="kicker">Institucional</span>
+            <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Quiénes somos</h2>
+            <p>Somos una Institución de Educación Técnica Superior con más de treinta años de trayectoria en Río Cuarto y la región.</p>
+            <p style="margin-top: 1rem;">Nuestro objetivo es asegurar que los estudiantes adquieran competencias técnicas y humanas basadas en la excelencia, transformándose en profesionales creativos y adaptables.</p>
+            <p style="margin-top: 1.5rem; font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-accent);">iTec Río Cuarto es Educación para Transformar.</p>
+          </div>
+          <div class="video-frame">
+            <video src="assets/video/video-spot.mp4" controls preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-header">
+          <div>
+            <span class="kicker">Ubicación y Canales</span>
+            <h2 class="section-title">Información de contacto</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Sede Centro</h3>
+            <p>Constitución 716<br>Barrio Centro, Río Cuarto</p>
+            <div style="margin-top: 1.5rem; font-size: 0.8125rem; font-family: var(--font-mono);">
+              <strong>Atención:</strong><br>Mañana: 8:00 a 12:30 hs<br>Tarde: 17:00 a 21:00 hs
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Sede Campus</h3>
+            <p>Wenceslao Tejerina Norte 783<br>Barrio Villa Dalcar, Río Cuarto</p>
+            <div style="margin-top: 1.5rem; font-size: 0.8125rem; font-family: var(--font-mono);">
+              <strong>Atención:</strong><br>Lunes a Jueves<br>Tarde: 19:00 a 22:00 hs
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Consultas Directas</h3>
+            <p>Tel: 0358-4643036<br>Email: informes@itecriocuarto.org.ar</p>
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="https://wa.me/5493585606036" target="_blank" rel="noopener" style="font-size: 0.875rem; color: var(--color-accent);">WhatsApp Carreras →</a>
+              <a href="https://wa.me/5493585606052" target="_blank" rel="noopener" style="font-size: 0.875rem; color: var(--color-accent);">WhatsApp Cursos →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-x">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color: #fff;">
+            <img src="assets/img/logo-itec.png" alt="Logo iTec" style="filter: brightness(0) invert(1);">
+            <span style="color: #fff;">iTec <em>Río Cuarto</em></span>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.875rem; max-width: 32ch; color: rgba(255,255,255,0.6);">Educación para transformar. Instituto de Educación Técnica Superior con más de 30 años de trayectoria.</p>
+        </div>
+        <div>
+          <h4>Estudiar</h4>
+          <ul>
+            <li><a href="carreras.html">Carreras</a></li>
+            <li><a href="ada-byron.html">Secundario Ada Byron</a></li>
+            <li><a href="trayectos.html">Trayectos</a></li>
+            <li><a href="https://cursos.itecriocuarto.org.ar/" target="_blank" rel="noopener">PCC Cursos ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Institución</h4>
+          <ul>
+            <li><a href="estudiantes.html">Estudiantes</a></li>
+            <li><a href="portal-de-trabajo.html">Portal de Trabajo</a></li>
+            <li><a href="itec-labs.html">iTec Labs</a></li>
+            <li><a href="https://sitec.itecriocuarto.org.ar/" target="_blank" rel="noopener">SiTec ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Redes Sociales</h4>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+            <a href="https://www.facebook.com/iTecRioCuarto" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/itecriocuarto/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@itecriocuarto" target="_blank" rel="noopener">TikTok</a>
+          </div>
+          <div style="margin-top: 2rem; font-size: 0.75rem; font-family: var(--font-mono); color: rgba(255,255,255,0.4);">
+            Río Cuarto, Córdoba, Argentina
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 iTec Río Cuarto — Instituto Tecnológico Río Cuarto</p>
+        <p>Educación para transformar</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
