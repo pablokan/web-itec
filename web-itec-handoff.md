@@ -1,79 +1,100 @@
-# Handoff — Overhaul sitio web iTec Río Cuarto
+# Handoff — Proyecto web-itec (actualizado)
 
-**Fecha:** 2026-07-24 · **Proyecto:** `web-itec` (`/mnt/work/development/projects/web-itec`)
-**Sesión origen:** `web-itec-overhaul-2026-07-24`
+**Fecha:** 2026-08-22 · **Proyecto:** `web-itec` (`/mnt/work/development/projects/web-itec`)
+**Reemplaza al handoff del 2026-07-24** (overhaul iTec). Este cubre todo lo posterior: versiones v3/v4/v5, landing Ada Byron y publicación en GitHub.
 
 ---
 
-## 1. Qué se está haciendo
+## 1. Estado del proyecto
 
-Rediseño completo (overhaul) del sitio institucional de iTec Río Cuarto, actualmente en Google Sites (público: `https://sites.google.com/itecriocuarto.org.ar/www/inicio`). Brief original y reglas de ejecución: **`TODO.md`** (3 fases: extraer contenido / anti-slop / estética tech SaaS; output HTML5 semántico + Tailwind compilado, multipágina, assets locales).
+El repo contiene **varias iteraciones de landing coexistiendo** (ninguna versión vieja fue borrada, por pedido explícito del usuario):
 
-## 2. Estado actual — dónde se quedó todo
+| Carpeta | Qué es | Estado |
+|---|---|---|
+| `site/` + `src/` + `build.mjs` | Overhaul original multipágina con Tailwind v4 compilado (sesión 07-24) | Pausado: faltan las 15 páginas internas y Fase 4 QA |
+| `site-v3/` | Intento editorial minimalista; se le aplicó una sesión Impeccable live (colorize del hero-box → variante 2 barra lateral acento, luego carbonize) | Congelada |
+| `site-v4/` | Intento dark-tech; el usuario la calificó de "espantosa", se limpió de AI slop (gradientes decorativos) según estándares Impeccable | Congelada |
+| `site-v5-imp/` | Rebuild desde cero inspirado en Minerva.edu / 42 Network: sistema editorial-tech, assets locales, Zen Dots self-hosted, border-radius 10px en imágenes y contenedores | La más avanzada para iTec; revisada por colegas vía túnel Cloudflare (:8085) |
+| `v5-2/` | Copia idéntica de `site-v5-imp/` (mismo style.css y title) — copia de trabajo sin cambios propios | Copia |
+| `ada/` | **Landing independiente del Colegio Secundario Tecnológico Ada Byron** | Completada y publicada en GitHub |
 
-**Completado:**
-- **Fase 0 — Extracción:** 18/18 páginas crawleadas e inventariadas en `content/*.md` (fuente de verdad). Todos los assets descargados localmente: 49 imágenes, 6 videos, 7 PDFs → `site/assets/`. Inventario y mapa de assets: **`content/_assets-manifest.md`** (incluye issues conocidos del sitio original). IDs de embebidos Drive/Forms/YouTube: **`content/_embed-ids.md`**.
-- **Fase 1 — Setup:** Node + Tailwind v4 compilado (`@tailwindcss/cli`), fuentes Geist/Geist Mono self-hosted, mini-generador estático `build.mjs` (partials + íconos Phosphor inline + rutas `{{root}}`). Scripts npm: `build:css`, `watch:css`.
-- **Fase 2 — Design system:** `src/input.css` — dark `oklch`, un solo acento (**rojo iTec #D72F32, APROBADO por el usuario**), cards `rounded-2xl`, botones pill, `.card-hover` con hover rojo grueso (aprobado).
-- **Fase 3 (parcial) — Landing v2:** `src/pages/index.html` → `site/index.html`. El usuario la revisó y pidió 6 cambios que **ya fueron aplicados** (hero con imagen "40 años" recoloreada `site/assets/img/logo-40-anios-dark.png`, carreras en grilla 2×2 uniforme sin recortes, videos distribuidos, hover rojo).
+## 2. Landing Ada Byron (`ada/`) — lo más reciente
 
-**Bloqueo actual / siguiente paso inmediato:**
-El usuario está esperando el **feedback de un colega** sobre la landing publicada temporalmente vía túnel de Cloudflare:
-- URL pública (efímera): `https://inter-recruiting-acquisitions-containing.trycloudflare.com`
-- Cuando llegue el feedback: aplicar ajustes a la landing O, si aprueba, **construir las 15 páginas internas restantes** con el mismo sistema (índices + internas de Carreras ×5, Ada Byron ×5, Estudiantes ×4, Trayectos, Portal de Trabajo, iTec Labs). El contenido verbatim de cada una ya está en `content/`.
-- Después: **Fase 4 — QA** (checklist contenido-vs-inventario, responsive, links, a11y, build minificado).
+Identidad visual cálida tradicional, deliberadamente distinta a la de iTec:
 
-## 3. Cómo correr todo
+- **Colores:** primario burdeos `#642725`, fondo crema `#fff8e2`.
+- **Fuente:** Satoshi (Fontshare), self-hosted WOFF2 en 5 pesos (300–900) → `ada/fonts/`.
+- **Hero:** foto full-width con overlay degradado teñido del primario.
+- **Sección Instagram (#instagram)** entre galería y contacto, con embed oficial de Instagram (blockquote + `embed.js`) de 4 Reels: `DbD0BzNEjsn`, `Da3CvosgGkp`, `DaSeU-ihLFR`, `DXrkKiokWUn`. Ícono ▶ para reels. Se eliminaron `.insta-card` / `.insta-card-icon` (reemplazados por los embeds).
+- **Textos** de propuesta, admisión, galería e Instagram: color negro, bold, `text-align: justify`.
+- **Admisión:** texto actualizado ("contamos con 1°, 2° y 3° año. A partir del ciclo lectivo 2027 abrimos 4° año. Agendá tu entrevista…") y su highlight-box sin borde ni fondo (`.highlight-box--clean`, transparente).
+- Propuesta: cards sin numeración `01/02/03`.
 
-```bash
-cd /mnt/work/development/projects/web-itec
-node build.mjs                 # genera site/**/*.html desde src/pages + partials
-npm run build:css              # Tailwind → site/assets/css/main.css (minificado)
-```
+## 3. Git / GitHub
 
-Server local (usar **uv, NO python directo** — pedido explícito del usuario) y túnel:
-```bash
-setsid uv run --no-project python -m http.server 8080 --directory site </dev/null >/tmp/itec-server.log 2>&1 & disown
-setsid /tmp/opencode/cloudflared tunnel --url http://localhost:8080 --no-autoupdate </dev/null >/tmp/cloudflared.log 2>&1 & disown
-```
-Apagar: `pkill -f cloudflared` y `pkill -f "http.server 8080"`.
-
-Verificación visual: Chrome headless (`google-chrome-stable --headless=new --screenshot=... --window-size=1440,N file://...` o contra localhost) + leer el PNG con la tool Read. Playwright 1.61 también disponible vía npx.
+- Repo creado y pusheado: **https://github.com/pablokan/web-itec** (público), rama `master` tracking `origin/master`. Un solo commit inicial (`f7d24a9`).
+- `.gitignore`: `node_modules/` y `package-lock.json`.
+- ⚠️ Warning de GitHub: `site-v3/assets/video/video-testi-software.mp4` pesa 53MB (>50 recomendado). Si molesta → git-lfs o quitarlo del repo.
+- Servidor local en `:8086` con túnel Cloudflare para preview.
 
 ## 4. Decisiones y preferencias del usuario (no negociables)
 
-- Acento único: **rojo iTec** (`--color-brand-500` en `src/input.css`).
-- Hover en cajas-enlace: borde gris `white/20` en reposo → **rojo iTec con grosor doble** al hover (borde + anillo inset).
-- **Ninguna imagen puede estar cortada**: usar aspect-ratio exacto de cada imagen (ej. `aspect-[1280/873]`).
-- Distribuciones **ordenadas y uniformes** (grillas simétricas; el bento asimétrico fue rechazado).
-- Videos **distribuidos** por la landing, no agrupados en una sección.
-- **Nunca pedir ni aceptar passwords** (el usuario ofreció la suya para el Google Site; fue rechazada — acceso solo por URL pública).
-- Assets 100% locales: **no hotlink** al CDN de Google (sus URLs firmadas expiran — ver memoria Engram #40).
-- Server con `uv` (Astral), procesos en background con `setsid ... & disown` + fds redirigidos (si no, el shell tool cuelga y mata el proceso).
+- iTec v5: hover de careers suave — rojo pálido `#f3b8b9` (no el rojo fuerte).
+- Ninguna imagen cortada: respetar aspect-ratio exacto.
+- Grillas ordenadas y uniformes (el bento asimétrico fue rechazado).
+- Assets 100% locales: **no hotlink** al CDN de Google (URLs firmadas expiran — Engram #40).
+- Server con `uv`, procesos background con `setsid ... & disown` + fds redirigidos (si no, el shell tool cuelga y mata el proceso).
+- Nunca pedir ni aceptar passwords.
+- Versiones viejas: no tocar, cada intento vive en su carpeta.
 
-## 5. Gotchas técnicas (ahorrate re-descubrirlas)
+## 5. Gotchas técnicos (del handoff anterior, siguen vigentes)
 
-- **Tailwind v4**: `@apply` de una clase custom dentro de otra falla ("Cannot apply unknown utility class") — componer en HTML (`class="btn btn-primary"`).
-- **Drive downloads**: archivos grandes disparan "virus scan warning" → POST a `drive.usercontent.google.com/download` con `id + export=download + confirm=t + uuid` (uuid de un solo uso, se extrae del HTML del warning).
-- **video-campus-virtual**: el original era MPEG-2 de 124MB → ya transcodeado a H.264 14MB con ffmpeg (el archivo actual es el bueno).
-- **YouTube embed (PCC, `pO55hU8AXj4`)**: en Chrome headless muestra "player configuration error" — es solo el headless, en navegador real funciona.
-- **Calendario Académico** es una imagen estática (`calendario-academico-2026.png`), no un iframe. **Horarios DS 1-3 año** llegaron vacíos (embebidos restringidos) — estructura preparada, falta que el cliente provea esos horarios.
-- **Conflicto de contenido**: "Quiénes somos" dice verbatim "más de treinta años", pero el rebrand actual es "40 años". Se preservó el texto original; pendiente decisión del usuario.
+- **Tailwind v4**: `@apply` de clase custom dentro de otra falla — componer en HTML.
+- **Drive downloads**: POST a `drive.usercontent.google.com/download` con `id + export=download + confirm=t + uuid` (uuid de un solo uso).
+- **video-campus-virtual**: MPEG-2 124MB ya transcodeado a H.264 14MB (el actual es el bueno).
+- **YouTube embed headless**: "player configuration error" en Chrome headless es solo del headless; en navegador real funciona.
+- **Calendario Académico** es imagen estática; horarios DS 1-3 año siguen pendientes (embebidos restringidos).
+- **Conflicto de contenido sin resolver**: "más de treinta años" vs rebrand "40 años".
+- Instagram: los embeds oficiales requieren el script `embed.js`; los shortcodes de reel van como blockquote con `/embed/captioned/`.
 
-## 6. Suggested skills
+## 6. Cómo correr
 
-- **`web-design-engineer`** — modo OVERHAUL; es el skill rector de esta tarea (checkpoints v0, design system, critique antes de entregar). Invocarlo al retomar el diseño de las páginas internas.
-- **`design-taste-frontend`** — reglas anti-slop ya aplicadas (un acento, sin gradientes púrpuras, Geist en vez de Inter, disciplina de eyebrows); seguir aplicándolo en las 15 páginas restantes.
-- **`code-review`** — al finalizar la Fase 3, para revisar el diff completo antes del QA final.
-- **`diagnosing-bugs`** — si aparecen problemas de rendering/assets en QA.
-- **`context7-mcp`** — para documentación actualizada de Tailwind CSS v4 si surgen dudas de sintaxis (`@theme`, `@utility`).
+```bash
+cd /mnt/work/development/projects/web-itec
+# iTec v5 (la vigente):
+python -m http.server <puerto> --directory site-v5-imp
+# Ada Byron:
+python -m http.server <puerto> --directory ada
+```
 
-## 7. Memoria persistente (Engram)
+Túnel público: `cloudflared tunnel --url http://localhost:<puerto> --no-autoupdate` (log a archivo, con setsid/disown).
 
-- Sesión: `web-itec-overhaul-2026-07-24`. Observación #40: pipeline same-session para URLs firmadas de Google Sites.
+Verificación visual: Chrome headless (`--headless=new --screenshot=... --window-size=1440,N`) + Read del PNG. Playwright 1.61 vía npx.
+
+## 7. Siguientes pasos posibles
+
+1. Definir qué landing "gana" para iTec (v5-imp es la favorita) y decidir si se continúa el plan multipágina de `site/` o se descarta.
+2. Resolver el conflicto "treinta vs cuarenta años".
+3. Horarios DS pendientes del cliente.
+4. Si el repo crece: evaluar git-lfs para el video de 53MB.
+
+## 8. Skills sugeridas
+
+- **`impeccable` / `web-design-engineer`** — para seguir puliendo cualquiera de las landings.
+- **`code-review`** — revisar diff antes de commits grandes.
+- **`context7-mcp`** — docs de Tailwind v4 si se retoma `site/`.
+
+## 9. Memoria persistente (Engram)
+
+- Sesión origen overhaul: `web-itec-overhaul-2026-07-24` (obs #40: pipeline URLs firmadas Google Sites).
 - Ejecutar `mem_context` / `mem_search` (proyecto `web-itec`) al retomar.
 
-## 8. Redacciones
+## 10. Checklist de migración a otra instalación/distro
 
-- URL de edición del Google Site con `resourcekey`: omitida a propósito (está en `TODO.md` si se necesita).
-- Sin credenciales de ningún tipo en esta sesión (política: nunca aceptarlas).
+El nuevo entorno accede a **esta misma carpeta** (`/mnt/work/development/projects/web-itec`) — no requiere clonar el repo. Este checklist se completó el 2026-08-22 antes de abandonar la distro anterior.
+
+1. **Commit + push del estado final** para dejar `origin` sincronizado (higiene, no bloqueante — la carpeta local es compartida). ✅ hecho 2026-08-22.
+2. **Instalar skills** en el nuevo opencode: `impeccable`, y las de Matt Pocock: `grill-with-docs`, `wayfinder`, `ponytail`, `code-review`, `implement`. Después correr **`setup-matt-pocock-skills` una vez** (configura issue tracker, labels de triage y layout de docs de dominio — sin eso wayfinder/grill-with-docs/to-tickets no tienen dónde escribir).
+3. **Reconfigurar MCP context7** en la nueva instalación.
+4. **Recrear server local + túnel Cloudflare** — son efímeros, no sobreviven el cambio (comandos en sección 6).
+5. **Build Tailwind solo si se retoma `site/`:** es la única versión con paso de build (`build.mjs` + `npm run build:css` compilan `src/input.css` → `site/assets/css/main.css`). Las demás (v3, v4, v5-imp, ada) son HTML/CSS estático puro, cero build. `node_modules/` ya está en la carpeta compartida; si el build falla por versión distinta de Node, correr `npm install`.
